@@ -1,4 +1,5 @@
-pqcrypto>=0.3
-cryptography>=42
-matplotlib>=3.8
-pandas>=2.0
+# Tested with Python 3.14.3 and the versions below.
+pqcrypto>=0.4.0
+cryptography>=49.0.0
+matplotlib>=3.10
+pandas>=3.0
