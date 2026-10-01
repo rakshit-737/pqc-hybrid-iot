@@ -1,0 +1,6 @@
+config,messages,bytes_up,bytes_down,bytes_total,overhead_B_per_msg,frames_802154,classical_steps,hybrid_steps
+PQShield-style (static ML-KEM key),1000,55252,3284,58536,6.5,1082,0,0
+"Hybrid handshake, static key",1000,55604,3700,59304,7.3,1091,0,0
+Classical ratchet (Signal-like),1000,54080,2080,56160,4.2,1128,62,0
+Hybrid re-handshake every 16,1000,279052,233100,512152,460.2,6733,0,62
+"AHQR (C=16, Q=256)",1000,60852,9236,70088,18.1,1299,59,3

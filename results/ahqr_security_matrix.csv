@@ -1,0 +1,6 @@
+config,Passive eavesdropper,Quantum computer (X25519 broken),ML-KEM cryptanalysis,Device state leak,State leak + quantum computer
+PQShield-style (static ML-KEM key),0.0,0.0,100.0,100.0,100.0
+"Hybrid handshake, static key",0.0,0.0,0.0,100.0,100.0
+Classical ratchet (Signal-like),0.0,100.0,0.0,1.2,100.0
+Hybrid re-handshake every 16,0.0,0.0,0.0,1.2,1.2
+"AHQR (C=16, Q=256)",0.0,0.0,0.0,1.2,1.2
