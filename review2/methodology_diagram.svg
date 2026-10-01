@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1180" width="2400" height="1180">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
+<rect width="2400" height="1180" fill="#FFFFFF"/>
+<rect x="24" y="24" width="356" height="1086" rx="4" fill="#F6F7F9" stroke="#D9DEE5" stroke-width="1.2"/>
+<rect x="43" y="43" width="30" height="30" rx="2" fill="#1B2A4A"/>
+<text x="58.0" y="64.0" font-family="Carlito, Calibri, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="86.0" y="65.0" font-family="Carlito, Calibri, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A" text-anchor="start" letter-spacing="1.2">PROBLEM FRAMING</text>
+<rect x="424" y="24" width="300" height="1086" rx="4" fill="#F6F7F9" stroke="#D9DEE5" stroke-width="1.2"/>
+<rect x="443" y="43" width="30" height="30" rx="2" fill="#1B2A4A"/>
+<text x="458.0" y="64.0" font-family="Carlito, Calibri, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="486.0" y="65.0" font-family="Carlito, Calibri, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A" text-anchor="start" letter-spacing="1.2">INSTRUMENTS</text>
+<rect x="768" y="24" width="926" height="1086" rx="4" fill="#F6F7F9" stroke="#D9DEE5" stroke-width="1.2"/>
+<rect x="787" y="43" width="30" height="30" rx="2" fill="#1B2A4A"/>
+<text x="802.0" y="64.0" font-family="Carlito, Calibri, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="830.0" y="65.0" font-family="Carlito, Calibri, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A" text-anchor="start" letter-spacing="1.2">EXPERIMENTS AND ANALYSIS</text>
+<rect x="1738" y="24" width="310" height="1086" rx="4" fill="#F6F7F9" stroke="#D9DEE5" stroke-width="1.2"/>
+<rect x="1757" y="43" width="30" height="30" rx="2" fill="#1B2A4A"/>
+<text x="1772.0" y="64.0" font-family="Carlito, Calibri, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="1800.0" y="65.0" font-family="Carlito, Calibri, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A" text-anchor="start" letter-spacing="1.2">VALIDATION</text>
+<rect x="2092" y="24" width="284" height="1086" rx="4" fill="#F6F7F9" stroke="#D9DEE5" stroke-width="1.2"/>
+<rect x="2111" y="43" width="30" height="30" rx="2" fill="#1B2A4A"/>
+<text x="2126.0" y="64.0" font-family="Carlito, Calibri, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="2154.0" y="65.0" font-family="Carlito, Calibri, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A" text-anchor="start" letter-spacing="1.2">SYNTHESIS</text>
+<line x1="385" y1="470" x2="419" y2="470" stroke="#4A5568" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="729" y1="470" x2="763" y2="470" stroke="#4A5568" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="1699" y1="470" x2="1733" y2="470" stroke="#4A5568" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="2053" y1="470" x2="2087" y2="470" stroke="#4A5568" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="44" y="100" width="316" height="214" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,11.5)">
+<text x="60.0" y="133.9" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Base paper: PQShield-IoT</text>
+<text x="60.0" y="163.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start" font-style="italic">Narayanan et al., 2026</text>
+<text x="60.0" y="192.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Kyber512 · Dilithium2 · AES-256-GCM</text>
+<text x="60.0" y="217.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">· SHA3-256 · permissioned blockchain</text>
+<text x="60.0" y="246.5" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Evaluated only in NS-3 / Contiki-NG</text>
+<text x="60.0" y="272.0" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">simulation</text>
+</g>
+<line x1="202.0" y1="318" x2="202.0" y2="350" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="44" y="354" width="316" height="136" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<text x="60.0" y="387.9" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Critical reading and literature</text>
+<text x="60.0" y="415.2" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">survey</text>
+<text x="60.0" y="445.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Six research threads, synthesised into</text>
+<text x="60.0" y="470.7" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">a gap register</text>
+<line x1="202.0" y1="494" x2="202.0" y2="526" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="44" y="530" width="316" height="560" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<text x="60.0" y="563.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Gap register</text>
+<rect x="60" y="610.6" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="77.6" y="629.0" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G1</text>
+<text x="114.0" y="629.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">No hybrid key exchange</text>
+<rect x="60" y="685.8000000000001" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="77.6" y="704.2" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G2</text>
+<text x="114.0" y="704.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">No stated methodology</text>
+<rect x="60" y="761.0000000000001" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="77.6" y="779.4" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G3</text>
+<text x="114.0" y="780.0" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Single signature scheme</text>
+<rect x="60" y="836.2000000000002" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="77.6" y="854.6" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G4</text>
+<text x="114.0" y="855.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">No side-channel analysis</text>
+<rect x="60" y="911.4000000000002" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="77.6" y="929.8" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G5</text>
+<text x="114.0" y="930.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">No device-class mapping</text>
+<line x1="60" y1="988.6000000000003" x2="344" y2="988.6000000000003" stroke="#DCE3EA" stroke-width="1.2"/>
+<rect x="60" y="1002.6000000000003" width="35.171875" height="26" rx="2" fill="#FFFFFF" stroke="#A23B2C" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="77.6" y="1021.0" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#A23B2C" text-anchor="middle">G6</text>
+<text x="114.0" y="1021.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Forward secrecy claimed with</text>
+<text x="114.0" y="1044.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">static KEM keys</text>
+<text x="114.0" y="1069.6" font-family="Carlito, Calibri, sans-serif" font-size="16" font-weight="400" fill="#A23B2C" text-anchor="start" font-style="italic">found during review</text>
+<rect x="444" y="100.0" width="260" height="180" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,7.9)">
+<text x="460.0" y="133.9" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">PQClean via pqcrypto</text>
+<text x="460.0" y="161.2" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">0.4.0</text>
+<text x="460.0" y="191.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">ML-KEM · HQC · ML-DSA ·</text>
+<text x="460.0" y="216.7" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Falcon · SPHINCS+</text>
+<text x="460.0" y="245.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start" font-style="italic">portable C reference code</text>
+</g>
+<rect x="444" y="302.4" width="260" height="180" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,7.9)">
+<text x="460.0" y="336.3" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">OpenSSL via cryptography</text>
+<text x="460.0" y="363.6" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">49.0.0</text>
+<text x="460.0" y="393.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">X25519 · ECDH · RSA ·</text>
+<text x="460.0" y="419.1" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Ed25519 · ECDSA</text>
+<text x="460.0" y="447.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start" font-style="italic">optimised assembly baseline</text>
+</g>
+<rect x="444" y="504.8" width="260" height="180" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,35.8)">
+<text x="460.0" y="538.8" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">pqm4 benchmark data</text>
+<text x="460.0" y="568.7" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Measured Cortex-M4 cycle</text>
+<text x="460.0" y="594.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">counts and peak stack, clean C</text>
+</g>
+<rect x="444" y="707.2" width="260" height="180" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,34.3)">
+<text x="460.0" y="741.2" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">RFC 7228 + IEEE 802.15.4</text>
+<text x="460.0" y="771.1" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Device classes 0 / 1 / 2</text>
+<text x="460.0" y="799.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start" font-style="italic">≈ 100 B frame payload</text>
+</g>
+<rect x="444" y="909.6" width="260" height="180" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,23.1)">
+<text x="460.0" y="943.6" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Test host</text>
+<text x="460.0" y="973.5" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Intel i5-13500H, one pinned</text>
+<text x="460.0" y="999.0" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">P-core, HIGH priority; Python</text>
+<text x="460.0" y="1024.5" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">3.14</text>
+</g>
+<text x="790.0" y="116.0" font-family="Carlito, Calibri, sans-serif" font-size="14" font-weight="600" fill="#5F6B7A" text-anchor="start" letter-spacing="1.4">PHASE AND METHOD</text>
+<text x="1300.0" y="116.0" font-family="Carlito, Calibri, sans-serif" font-size="14" font-weight="600" fill="#5F6B7A" text-anchor="start" letter-spacing="1.4">MEASURED QUANTITY, ANALYSIS AND OUTPUT</text>
+<rect x="788" y="134.0" width="470" height="132" rx="3" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="1.4"/>
+<g transform="translate(0,11.8)">
+<rect x="804" y="147.0" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="821.6" y="165.4" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G2</text>
+<text x="849.2" y="167.9" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">P1 · Primitive benchmarks</text>
+<text x="804.0" y="197.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">16 schemes × keygen, encapsulate / decapsulate or sign /</text>
+<text x="804.0" y="223.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">verify; sizes read from real objects</text>
+</g>
+<line x1="1262" y1="199.8" x2="1294" y2="199.8" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="1298" y="134.0" width="376" height="132" rx="3" fill="#EFF2F6" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,16.3)">
+<text x="1314.0" y="165.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Median ms over 15–300 adaptive samples;</text>
+<text x="1314.0" y="191.1" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">public-key, ciphertext and signature bytes</text>
+<text x="1314.0" y="219.3" font-family="'JetBrains Mono NL', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#2F5597" text-anchor="start">timings.csv · sizes.csv</text>
+</g>
+<rect x="788" y="281.6" width="470" height="132" rx="3" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="1.4"/>
+<g transform="translate(0,11.8)">
+<rect x="804" y="294.6" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="821.6" y="313.0" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G3</text>
+<text x="849.2" y="315.6" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">P2 · Signature families</text>
+<text x="804.0" y="345.5" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">ML-DSA vs Falcon vs SPHINCS+, two security levels each;</text>
+<text x="804.0" y="371.0" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Falcon length sampled ×100</text>
+</g>
+<line x1="1262" y1="347.40000000000003" x2="1294" y2="347.40000000000003" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="1298" y="281.6" width="376" height="132" rx="3" fill="#EFF2F6" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,16.3)">
+<text x="1314.0" y="313.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Sign and verify time against signature size</text>
+<text x="1314.0" y="338.7" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">(log–log trade-off)</text>
+<text x="1314.0" y="366.9" font-family="'JetBrains Mono NL', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#2F5597" text-anchor="start">fig2 · fig4_sign_tradeoff</text>
+</g>
+<rect x="788" y="429.2" width="470" height="132" rx="3" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="1.4"/>
+<g transform="translate(0,11.8)">
+<rect x="804" y="442.2" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="821.6" y="460.6" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G1</text>
+<text x="849.2" y="463.1" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">P3 · Hybrid key exchange</text>
+<text x="804.0" y="493.1" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">TCP client and server; classical | ML-KEM | hybrid at 512 /</text>
+<text x="804.0" y="518.6" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">768; SHA3-256 combiner, AES-GCM confirmation</text>
+</g>
+<line x1="1262" y1="495.0" x2="1294" y2="495.0" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="1298" y="429.2" width="376" height="132" rx="3" fill="#EFF2F6" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,16.3)">
+<text x="1314.0" y="460.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Latency over 100 runs; exact bytes per</text>
+<text x="1314.0" y="486.3" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">direction from 4-byte length framing</text>
+<text x="1314.0" y="514.5" font-family="'JetBrains Mono NL', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#2F5597" text-anchor="start">handshake_results.csv</text>
+</g>
+<rect x="788" y="576.8" width="470" height="132" rx="3" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="1.4"/>
+<g transform="translate(0,11.8)">
+<rect x="804" y="589.8" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="821.6" y="608.2" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G4</text>
+<text x="849.2" y="610.8" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">P4 · Timing side-channel</text>
+<text x="804.0" y="640.7" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">A: tag comparison vs matching prefix. B: ML-KEM</text>
+<text x="804.0" y="666.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">decapsulation of valid, flipped and random ciphertexts</text>
+</g>
+<line x1="1262" y1="642.5999999999999" x2="1294" y2="642.5999999999999" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="1298" y="576.8" width="376" height="132" rx="3" fill="#EFF2F6" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,16.3)">
+<text x="1314.0" y="608.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Pearson r (trend) and Welch z; leak only if</text>
+<text x="1314.0" y="633.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">r &gt; 0.9 and |z| &gt; 3</text>
+<text x="1314.0" y="662.1" font-family="'JetBrains Mono NL', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#2F5597" text-anchor="start">timing_analysis.csv</text>
+</g>
+<rect x="788" y="724.4" width="470" height="132" rx="3" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="1.4"/>
+<g transform="translate(0,11.8)">
+<rect x="804" y="737.4" width="35.171875" height="26" rx="2" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="0"/>
+<text x="821.6" y="755.8" font-family="Carlito, Calibri, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">G5</text>
+<text x="849.2" y="758.4" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">P5 · Cortex-M4 bridge</text>
+<text x="804.0" y="788.3" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Join desktop medians to pqm4 cycles; test the paper&#x27;s</text>
+<text x="804.0" y="813.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">four reported latencies</text>
+</g>
+<line x1="1262" y1="790.1999999999999" x2="1294" y2="790.1999999999999" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="1298" y="724.4" width="376" height="132" rx="3" fill="#EFF2F6" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,6.2)">
+<text x="1314.0" y="756.0" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Implied clock = cycles ÷ (ms × 1000); spread</text>
+<text x="1314.0" y="781.5" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">across operations; device matrix</text>
+<text x="1314.0" y="809.7" font-family="'JetBrains Mono NL', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#2F5597" text-anchor="start">pqm4_comparison.csv ·</text>
+<text x="1314.0" y="830.0" font-family="'JetBrains Mono NL', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#2F5597" text-anchor="start">device_class_matrix.csv</text>
+</g>
+<rect x="788" y="890" width="886" height="200" rx="3" fill="#E6EBF2" stroke="#1B2A4A" stroke-width="1.4"/>
+<text x="804.0" y="923.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Controlled measurement protocol</text>
+<text x="1113.7" y="923.0" font-family="Carlito, Calibri, sans-serif" font-size="17" font-weight="400" fill="#5F6B7A" text-anchor="start" font-style="italic">shared by every phase; the direct answer to G2</text>
+<rect x="804" y="952" width="172.953125" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="890.5" y="974.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">perf_counter_ns clock</text>
+<rect x="986.953125" y="952" width="164.109375" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="1069.0" y="974.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">time-based warm-up</text>
+<rect x="1161.0625" y="952" width="270.953125" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="1296.5" y="974.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">adaptive batching (≥ 10 ms / sample)</text>
+<rect x="804" y="998" width="247.734375" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="927.9" y="1020.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">garbage collector off while timing</text>
+<rect x="1061.734375" y="998" width="212.921875" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="1168.2" y="1020.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">pinned P-core, HIGH priority</text>
+<rect x="1284.65625" y="998" width="188.421875" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="1378.9" y="1020.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">interleaved input classes</text>
+<rect x="804" y="1044" width="268.640625" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="938.3" y="1066.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">input pools outside the timed region</text>
+<rect x="1082.640625" y="1044" width="205.703125" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="1185.5" y="1066.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">medians + full distributions</text>
+<rect x="1298.34375" y="1044" width="226.25" height="34" rx="2" fill="#FFFFFF" stroke="#9AA5B5" stroke-width="1.1"/>
+<text x="1411.5" y="1066.5" font-family="Carlito, Calibri, sans-serif" font-size="16.5" font-weight="500" fill="#1B2A4A" text-anchor="middle">environment logged every run</text>
+<line x1="1023.0" y1="886" x2="1023.0" y2="862" stroke="#1B2A4A" stroke-width="2" marker-end="url(#ah)" stroke-dasharray="6 4"/>
+<line x1="1486.0" y1="886" x2="1486.0" y2="862" stroke="#1B2A4A" stroke-width="2" marker-end="url(#ah)" stroke-dasharray="6 4"/>
+<rect x="1758" y="100.0" width="270" height="150" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,20.8)">
+<text x="1774.0" y="133.9" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Calibration rows</text>
+<text x="1774.0" y="163.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Null-operation noise floor:</text>
+<text x="1774.0" y="189.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">0.036 µs and 0.196 µs</text>
+</g>
+<rect x="1758" y="268.0" width="270" height="150" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,20.8)">
+<text x="1774.0" y="301.9" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Byte-accounting self-test</text>
+<text x="1774.0" y="331.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Predicted = measured bytes in</text>
+<text x="1774.0" y="357.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">all 5 handshake modes</text>
+</g>
+<rect x="1758" y="436.0" width="270" height="150" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,8.1)">
+<text x="1774.0" y="469.9" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Security assertions</text>
+<text x="1774.0" y="499.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">8 checks: agreement,</text>
+<text x="1774.0" y="525.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">fail-closed, downgrade, hybrid</text>
+<text x="1774.0" y="550.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">property</text>
+</g>
+<rect x="1758" y="604.0" width="270" height="150" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,20.8)">
+<text x="1774.0" y="638.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Negative control</text>
+<text x="1774.0" y="667.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Sequential collector reproduces</text>
+<text x="1774.0" y="693.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">a phantom leak (z = 4.7)</text>
+</g>
+<rect x="1758" y="772.0" width="270" height="150" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,20.8)">
+<text x="1774.0" y="806.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Report ↔ CSV verifier</text>
+<text x="1774.0" y="835.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Every quoted number</text>
+<text x="1774.0" y="861.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">re-checked against its dataset</text>
+</g>
+<rect x="1758" y="940.0" width="270" height="150" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,20.8)">
+<text x="1774.0" y="974.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Adversarial review</text>
+<text x="1774.0" y="1003.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Independent reviewer passes;</text>
+<text x="1774.0" y="1029.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">22 defects found and fixed</text>
+</g>
+<rect x="2112" y="100" width="244" height="420" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<text x="2128.0" y="133.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">Findings</text>
+<rect x="2129" y="171.25" width="7" height="7" fill="#1B2A4A"/>
+<text x="2146.0" y="181.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">PQC cost is bytes, not</text>
+<text x="2146.0" y="204.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">compute</text>
+<rect x="2129" y="236.75" width="7" height="7" fill="#1B2A4A"/>
+<text x="2146.0" y="246.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Hybrid costs only +64 B</text>
+<rect x="2129" y="278.75" width="7" height="7" fill="#1B2A4A"/>
+<text x="2146.0" y="288.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Pick signatures by role</text>
+<rect x="2129" y="320.75" width="7" height="7" fill="#1B2A4A"/>
+<text x="2146.0" y="330.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Naive compare leaks;</text>
+<text x="2146.0" y="354.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">ML-KEM does not</text>
+<rect x="2129" y="386.25" width="7" height="7" fill="#1B2A4A"/>
+<text x="2146.0" y="396.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Paper&#x27;s latencies imply</text>
+<text x="2146.0" y="419.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">25–189 MHz</text>
+<rect x="2129" y="451.75" width="7" height="7" fill="#1B2A4A"/>
+<text x="2146.0" y="461.8" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Forward-secrecy</text>
+<text x="2146.0" y="485.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">contradiction</text>
+<line x1="2234.0" y1="524" x2="2234.0" y2="556" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="2112" y="560" width="244" height="150" rx="3" fill="#E6EBF2" stroke="#1B2A4A" stroke-width="1.4"/>
+<g transform="translate(0,19.9)">
+<text x="2128.0" y="594.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">RFC 7228 device-class</text>
+<text x="2128.0" y="621.2" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">matrix</text>
+<text x="2128.0" y="651.2" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#3A4556" text-anchor="start">Scheme × role × device class</text>
+</g>
+<line x1="2234.0" y1="714" x2="2234.0" y2="746" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="2112" y="750" width="244" height="160" rx="3" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="1.4"/>
+<g transform="translate(0,13.1)">
+<text x="2128.0" y="784.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#FFFFFF" text-anchor="start">Deployment guidance</text>
+<text x="2128.0" y="813.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#C9D8DC" text-anchor="start">Which post-quantum</text>
+<text x="2128.0" y="839.4" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#C9D8DC" text-anchor="start">scheme, in which role, on</text>
+<text x="2128.0" y="864.9" font-family="Carlito, Calibri, sans-serif" font-size="18.5" font-weight="400" fill="#C9D8DC" text-anchor="start">which class of IoT device</text>
+</g>
+<line x1="2234.0" y1="914" x2="2234.0" y2="946" stroke="#4A5568" stroke-width="2.4" marker-end="url(#ah)"/>
+<rect x="2112" y="950" width="244" height="140" rx="3" fill="#FFFFFF" stroke="#B4BCC8" stroke-width="1.4"/>
+<g transform="translate(0,29.2)">
+<text x="2128.0" y="984.0" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">IEEE report +</text>
+<text x="2128.0" y="1011.2" font-family="Carlito, Calibri, sans-serif" font-size="21" font-weight="600" fill="#1B2A4A" text-anchor="start">reproducible code</text>
+</g>
+<text x="28.0" y="1142.0" font-family="Carlito, Calibri, sans-serif" font-size="16" font-weight="400" fill="#5F6B7A" text-anchor="start">G-tags link each phase to the gap it closes.  Solid arrows: data flow.  Dashed arrows: the shared protocol applies to every phase.  All figures and tables are regenerated from the CSV outputs.</text>
+</svg>
