@@ -3,16 +3,18 @@ ahqr.py
 =======
 AHQR - Adaptive Hybrid Quantum-Resilient Ratchet for constrained IoT links.
 
-This is the project's NOVEL contribution. The base paper (PQShield-IoT) runs
-one pure-PQC key exchange (Kyber512) and then protects every message with a
-single static session key. Phases 1-5 of this project showed three things
-about that design:
+This is the project's novel contribution. The base paper (PQShield-IoT)
+uses pure PQC (Kyber512 + Dilithium2) and encapsulates against a static,
+long-term Kyber key; there is no ephemeral KEM key anywhere in its protocol.
+Phases 1-5 of this project showed three things about that design:
 
   * PQC's real cost on IoT is BYTES-ON-WIRE, not CPU time (an ML-KEM-768
     public key alone needs 15 IEEE 802.15.4 frames);
   * hybrids (classical + PQ) are almost free insurance;
-  * a static session key has no forward secrecy and never heals after a
-    device compromise.
+  * static KEM keys give no forward secrecy (Gap 6), and its key rotation
+    (Eq. 10, K = SHA3-256(ss || counter || T_rot)) re-hashes the same
+    shared secret with public inputs, so no fresh secret ever enters and
+    a compromised device never recovers.
 
 AHQR combines classical and post-quantum cryptography at THREE layers, each
 running at its own cadence, so that the expensive PQ material is sent only as
@@ -26,9 +28,9 @@ often as the threat model actually requires:
   Layer 2  Dual-cadence hybrid ratchet (during the session)
            * every message      : symmetric KDF chain step  (0 extra bytes)
                                   -> per-message forward secrecy
-           * every C messages   : classical X25519 ratchet  (+64 B)
+           * every C messages   : classical X25519 ratchet  (+84 B)
                                   -> cheap post-compromise healing
-           * every Q messages   : hybrid X25519+ML-KEM step (+~2 KB)
+           * every Q messages   : hybrid X25519+ML-KEM step (+2.3 KB)
                                   -> post-compromise healing that also
                                      survives a quantum adversary
            Root update: rk' = HKDF(rk, ss_x25519 || ss_mlkem?, transcript)
@@ -43,19 +45,22 @@ often as the threat model actually requires:
            Key observation used by the policy: CONFIDENTIALITY must be PQ
            today (harvest-now-decrypt-later), but AUTHENTICATION only has
            to resist an attacker at the moment of the handshake, so the
-           2.4 KB ML-DSA signature can be dropped while z is far away.
+           2.4 KB ML-DSA signatures (60 frames per handshake) can be
+           dropped while z is far away.
 
 Everything below is real cryptography (PQClean via `pqcrypto`, OpenSSL via
 `cryptography`); wire messages are real byte strings whose lengths are what
 the evaluation counts.
 
-Relation to prior work (be honest in the viva): hybrid KEMs (TLS 1.3
-X25519MLKEM768, X-Wing), composite signatures (IETF LAMPS drafts) and PQ
-ratchets (Signal PQXDH / SPQR triple ratchet) each exist separately. The
-contribution here is their CO-DESIGN for 802.15.4-class IoT: a two-cadence
-ratchet whose PQ interval is a tunable bandwidth/healing trade-off, an
-adversary simulator that measures exactly which message keys each attacker
-recovers, and a Mosca-driven policy that sets the cadences per device class.
+Relation to prior work: hybrid KEMs (TLS 1.3 X25519MLKEM768, X-Wing),
+composite signatures (IETF LAMPS drafts) and PQ ratchets (Signal PQXDH /
+SPQR triple ratchet) each exist separately, and the base paper already has
+an optimisation layer (algorithm pruning per device profile, key rotation
+driven by energy and throughput). The contribution here is the co-design
+for 802.15.4-class IoT: a two-cadence ratchet whose PQ interval is a
+tunable bandwidth/healing trade-off, an adversary simulator that measures
+exactly which message keys each attacker recovers, and a policy driven by
+a threat model (Mosca) rather than by energy and throughput.
 """
 
 from __future__ import annotations
@@ -73,13 +78,16 @@ from pqcrypto.sign import ml_dsa_44
 
 KEMS = {512: ml_kem_512, 768: ml_kem_768}
 
-# IEEE 802.15.4: 127 B PHY frame. After MAC header/FCS and a compressed
-# 6LoWPAN header, ~81 B of application payload is a common working figure
-# (RFC 4944 / RFC 6282 worst-case with link-layer security).
+# IEEE 802.15.4 (RFC 4944 sec. 4): 127 B frame - 25 B maximum MAC overhead
+# - 21 B AES-CCM-128 link-layer security = 81 B for the adaptation layer.
+# 6LoWPAN/UDP headers are ignored, so frame counts here are a lower bound.
 FRAME_PAYLOAD = 81
 
-HDR = 4          # epoch(2) || counter(2) on every data message
-TAG = 16         # AES-GCM tag (nonce is derived from the counter, not sent)
+# A ratchet offer sent downlink travels in its own AEAD-protected message:
+# epoch/counter header (4 B) + AES-GCM tag (16 B). The device's reply is
+# piggybacked on its next data message, which already carries both.
+ENVELOPE = 4 + 16
+
 NEVER = 0        # cadence value meaning "never"
 
 
@@ -201,6 +209,7 @@ def standard_configs(c: int = 16, q: int = 256) -> list[Config]:
                auth="classical", c_every=c),
         Config(f"Hybrid re-handshake every {c}", c_every=c, q_every=c,
                rehandshake=True),
+        Config(f"AHQR (C={c}, Q={c})", c_every=c, q_every=c),
         Config(f"AHQR (C={c}, Q={q})", c_every=c, q_every=q),
     ]
 
@@ -243,7 +252,7 @@ class Session:
         self.msg_keys: list[bytes] = []
         self.epoch = 0
         self.ctr = 0
-        self._handshake(0, first=True)
+        self._handshake(0)
 
     # -- key exchange core shared by handshake and ratchet steps ----------
     def _exchange(self, use_c: bool, use_q: bool) -> tuple[bytes, bytes, bytes, bytes | None, bytes | None]:
@@ -268,14 +277,19 @@ class Session:
             up += ct
         return bytes(up), bytes(down), h(bytes(down), bytes(up)), ss_c, ss_q
 
-    def _handshake(self, msg_index: int, first: bool) -> None:
+    def _handshake(self, msg_index: int) -> None:
+        # Two flights. The gateway signs its ephemeral offer (like a signed
+        # pre-key); the device signs the full transcript, which binds both
+        # offers and its reply. The first data message gives implicit key
+        # confirmation.
         cfg = self.cfg
         up, down, tr, ss_c, ss_q = self._exchange(cfg.hs_classical, cfg.hs_pq)
         if cfg.auth != "none":
-            sig_g = self.gw_id.sign(tr)
-            sig_d = self.dev_id.sign(tr + b"dev")
-            assert verify(self.gw_id.public, tr, sig_g)
-            assert verify(self.dev_id.public, tr + b"dev", sig_d)
+            offer = b"offer" + h(down)
+            sig_g = self.gw_id.sign(offer)
+            sig_d = self.dev_id.sign(b"dev" + tr)
+            assert verify(self.gw_id.public, offer, sig_g)
+            assert verify(self.dev_id.public, b"dev" + tr, sig_d)
             down += sig_g
             up += sig_d
         fresh = (ss_c or b"") + (ss_q or b"")
@@ -285,7 +299,7 @@ class Session:
 
     def _ratchet(self, msg_index: int, hybrid: bool) -> None:
         if self.cfg.rehandshake:
-            self._handshake(msg_index, first=False)
+            self._handshake(msg_index)
             self.ratchet_events["hybrid" if hybrid else "classical"] += 1
             return
         up, down, tr, ss_c, ss_q = self._exchange(True, hybrid)
@@ -294,7 +308,7 @@ class Session:
         kind = "hybrid" if hybrid else "classical"
         self.ratchet_events[kind] += 1
         self._commit_step(msg_index, kind, tr, ss_c, ss_q, True, rk, ck,
-                          len(up), len(down))
+                          len(up), len(down) + ENVELOPE)
 
     def _commit_step(self, idx, kind, tr, ss_c, ss_q, mixes, rk, ck, nup, ndown):
         self.rk, self.ck = rk, ck
@@ -418,15 +432,6 @@ def _chain_key_before(sess: Session, step_idx: int, m: int) -> bytes:
 # Layer 3: Mosca-adaptive policy
 # --------------------------------------------------------------------------
 
-DEVICE_CLASSES = {
-    # RFC 7228 class: (RAM KB, flash KB, typical link)
-    "Class 0": (10, 100, "802.15.4"),
-    "Class 1": (10, 100, "802.15.4"),
-    "Class 2": (50, 250, "802.15.4 / BLE"),
-    "Gateway": (1 << 20, 1 << 20, "Ethernet / Wi-Fi"),
-}
-
-
 def policy(device_class: str, shelf_life_y: float, migration_y: float = 5,
            crqc_y: float = 15, msgs_per_day: int = 96) -> dict:
     """Mosca-adaptive parameter choice.
@@ -439,8 +444,9 @@ def policy(device_class: str, shelf_life_y: float, migration_y: float = 5,
                     -> PQ key exchange REQUIRED now
       y >= z     -> forgery during the fleet's lifetime is plausible
                     -> PQ (composite) authentication required
-    Ratchet cadences are set so classical healing happens about hourly and
-    PQ healing about daily, then clamped to what the link can afford.
+    Cadences: a classical step about hourly; a hybrid PQ step daily when
+    x + y > z, otherwise weekly; Class 1 devices double Q to save
+    bandwidth. These intervals are heuristics, not derived from a model.
     """
     hndl = shelf_life_y + migration_y > crqc_y
     pq_auth = migration_y >= crqc_y or device_class == "Gateway"
