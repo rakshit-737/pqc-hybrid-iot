@@ -1,0 +1,4 @@
+pqcrypto>=0.3
+cryptography>=42
+matplotlib>=3.8
+pandas>=2.0
