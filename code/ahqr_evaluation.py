@@ -59,6 +59,10 @@ SCENARIOS = [
 ]
 
 
+def LEAK_POINTS(n: int) -> range:
+    return range(1, n, 37)
+
+
 def run_session(cfg: Config, n: int) -> Session:
     s = Session(cfg)
     for _ in range(n):
@@ -80,8 +84,12 @@ def e1_e2(n: int) -> tuple[pd.DataFrame, pd.DataFrame]:
         s = run_session(cfg, n)
         row = {"config": cfg.name}
         for label, bc, bq, leak in SCENARIOS:
-            k = adversary_recovers(s, bc, bq, compromise_at=n // 2 if leak else None)
-            row[label] = round(100 * sum(k) / n, 1)
+            # A single leak point can land just before a ratchet step and
+            # flatter one design; average over leak points across the session.
+            points = LEAK_POINTS(n) if leak else [None]
+            exposed = [sum(adversary_recovers(s, bc, bq, compromise_at=t))
+                       for t in points]
+            row[label] = round(100 * statistics.fmean(exposed) / n, 1)
         sec.append(row)
         link.append({"config": cfg.name, "messages": n,
                      "bytes_up": s.up, "bytes_down": s.down,
@@ -101,7 +109,7 @@ def e3(n: int) -> pd.DataFrame:
         # average over many leak points so the result is not an artefact
         # of where the leak lands relative to the next PQ step
         exposed = [sum(adversary_recovers(s, True, False, compromise_at=t))
-                   for t in range(1, n, 37)]
+                   for t in LEAK_POINTS(n)]
         rows.append({"Q": q or "never", "overhead_B_per_msg": overhead(s, n),
                      "frames_802154": s.frames,
                      "exposed_msgs_state_leak_plus_CRQC":
@@ -166,28 +174,32 @@ def e5() -> pd.DataFrame:
 def fig_security(df: pd.DataFrame) -> None:
     cols = [c for c in df.columns if c != "config"]
     data = df[cols].values
-    fig, ax = plt.subplots(figsize=(9.6, 3.7))
+    fig, ax = plt.subplots(figsize=(9.6, 4.2))
     ax.grid(False)
     cmap = LinearSegmentedColormap.from_list(
         "s", ["#e6f5ee", "#f6e3b0", "#f0b9b0", RED])
     ax.imshow(data, cmap=cmap, vmin=0, vmax=100, aspect="auto")
-    last = data.shape[0] - 1
+    ours = [i for i, c in enumerate(df["config"]) if c.startswith("AHQR")]
     for i in range(data.shape[0]):
         for j in range(data.shape[1]):
             v = data[i, j]
             ax.text(j, i, f"{v:g}%", ha="center", va="center",
                     color=INK if v < 80 else "white", fontsize=9,
-                    fontweight="bold" if i == last else "normal")
+                    fontweight="bold" if i in ours else "normal")
     ax.set_xticks(range(len(cols)),
                   [c.replace(" (", "\n(").replace(" + ", "\n+ ") for c in cols],
                   fontsize=8)
     ax.set_yticks(range(len(df)), df["config"], fontsize=8.5)
-    ax.get_yticklabels()[last].set_fontweight("bold")
+    for i in ours:
+        ax.get_yticklabels()[i].set_fontweight("bold")
     ax.tick_params(length=0)
     for s in ax.spines.values():
         s.set_visible(False)
     ax.set_title("Share of message keys each adversary recovers (lower is better)",
-                 loc="left", fontsize=11, color=INK, pad=10)
+                 loc="left", fontsize=11, color=INK, pad=22)
+    ax.text(0, 1.02, f"{df.shape[0]} designs, 1,000 messages; state-leak columns "
+            f"are the mean over {len(LEAK_POINTS(1000))} leak points",
+            transform=ax.transAxes, fontsize=8, color=MUTED)
     fig.tight_layout()
     fig.savefig(RESULTS / "fig8_ahqr_security.png", dpi=200)
     plt.close(fig)
