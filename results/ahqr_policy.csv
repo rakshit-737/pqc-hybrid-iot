@@ -1,0 +1,13 @@
+device_class,shelf_life_years,kem,auth,C_msgs,Q_msgs,hndl_threat,note
+Class 0,0.1,none (gateway proxy),classical,4,never,False,PQ terminated at gateway
+Class 0,5.0,none (gateway proxy),classical,4,never,False,PQ terminated at gateway
+Class 0,25.0,none (gateway proxy),classical,4,never,True,PQ terminated at gateway
+Class 1,0.1,ML-KEM-512,classical,4,1344,False,PQ KEX as insurance
+Class 1,5.0,ML-KEM-512,classical,4,1344,False,PQ KEX as insurance
+Class 1,25.0,ML-KEM-512,classical,4,192,True,HNDL: PQ KEX mandatory
+Class 2,0.1,ML-KEM-768,classical,4,672,False,PQ KEX as insurance
+Class 2,5.0,ML-KEM-768,classical,4,672,False,PQ KEX as insurance
+Class 2,25.0,ML-KEM-768,classical,4,96,True,HNDL: PQ KEX mandatory
+Gateway,0.1,ML-KEM-768,composite,4,672,False,PQ KEX as insurance
+Gateway,5.0,ML-KEM-768,composite,4,672,False,PQ KEX as insurance
+Gateway,25.0,ML-KEM-768,composite,4,96,True,HNDL: PQ KEX mandatory

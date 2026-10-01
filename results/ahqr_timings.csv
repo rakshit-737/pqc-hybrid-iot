@@ -1,0 +1,8 @@
+operation,median_ms,min_ms,reps
+"Handshake, composite auth (Ed25519+ML-DSA-44)",8.6357,5.3367,40
+"Handshake, classical auth (Ed25519)",4.5449,2.7113,40
+Composite sign (Ed25519+ML-DSA-44),1.9362,0.8026,200
+Composite verify,1.0393,0.5097,200
+Classical ratchet step (X25519),0.8427,0.3476,200
+Hybrid ratchet step (X25519+ML-KEM-768),2.4062,1.3764,200
+Per message (chain step + AES-256-GCM),0.0372,0.0339,200
