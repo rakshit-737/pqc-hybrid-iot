@@ -1,0 +1,6 @@
+experiment,function,input_class,samples,median_ns,mean_ns,stdev_ns,welch_z,pearson_r,verdict
+B-seq:mlkem-decaps,ML-KEM-512 decapsulate,valid ct,300,86105.0,86317.9,2465.7,,,
+B-seq:mlkem-decaps,ML-KEM-512 decapsulate,1 bit flipped,300,86012.5,86275.9,1947.1,,,
+B-seq:mlkem-decaps,ML-KEM-512 decapsulate,random bytes,300,86260.0,88769.1,8663.7,,,
+B-seq:verdict,ML-KEM-512 decapsulate,1 bit flipped vs valid,300,-92.5,,,-0.2,,constant-time (no evidence of leak)
+B-seq:verdict,ML-KEM-512 decapsulate,random bytes vs valid,300,155.0,,,4.7,,TIMING DIFFERENCE (oracle risk)

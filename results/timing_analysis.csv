@@ -1,0 +1,27 @@
+experiment,function,input_class,samples,median_ns,mean_ns,stdev_ns,welch_z,pearson_r,verdict
+A:tag-compare,naive Python loop,prefix=0,300,330.3,378.16,109.47,,,
+A:tag-compare,naive Python loop,prefix=4,300,442.6,499.91,134.35,,,
+A:tag-compare,naive Python loop,prefix=8,300,568.15,623.69,138.54,,,
+A:tag-compare,naive Python loop,prefix=16,300,775.0,846.07,167.53,,,
+A:tag-compare,naive Python loop,prefix=24,300,983.52,1075.57,199.56,,,
+A:tag-compare,naive Python loop,prefix=31,300,1165.78,1272.16,231.06,,,
+A:verdict,naive Python loop,trend over prefix,300,835.48,,,60.6,1.0,LEAKS (time rises with prefix)
+A:tag-compare,bytes == (memcmp),prefix=0,300,144.95,158.44,34.44,,,
+A:tag-compare,bytes == (memcmp),prefix=4,300,151.12,167.56,38.34,,,
+A:tag-compare,bytes == (memcmp),prefix=8,300,152.65,167.0,38.07,,,
+A:tag-compare,bytes == (memcmp),prefix=16,300,151.55,167.42,38.57,,,
+A:tag-compare,bytes == (memcmp),prefix=24,300,153.18,168.86,39.57,,,
+A:tag-compare,bytes == (memcmp),prefix=31,300,152.12,166.24,35.78,,,
+A:verdict,bytes == (memcmp),trend over prefix,300,7.18,,,2.7,0.635,no exploitable trend
+A:tag-compare,hmac.compare_digest,prefix=0,300,173.88,179.95,18.69,,,
+A:tag-compare,hmac.compare_digest,prefix=4,300,173.85,179.37,18.51,,,
+A:tag-compare,hmac.compare_digest,prefix=8,300,173.62,178.76,17.7,,,
+A:tag-compare,hmac.compare_digest,prefix=16,300,173.85,179.31,16.55,,,
+A:tag-compare,hmac.compare_digest,prefix=24,300,173.75,178.79,16.19,,,
+A:tag-compare,hmac.compare_digest,prefix=31,300,174.0,177.96,15.4,,,
+A:verdict,hmac.compare_digest,trend over prefix,300,0.12,,,-1.4,0.332,no exploitable trend
+B:mlkem-decaps,ML-KEM-512 decapsulate,valid ct,300,34812.5,35350.7,2008.1,,,
+B:mlkem-decaps,ML-KEM-512 decapsulate,1 bit flipped,300,34830.0,35433.6,2363.4,,,
+B:mlkem-decaps,ML-KEM-512 decapsulate,random bytes,300,34850.0,35410.2,1800.9,,,
+B:verdict,ML-KEM-512 decapsulate,1 bit flipped vs valid,300,17.5,,,0.5,,constant-time (no evidence of leak)
+B:verdict,ML-KEM-512 decapsulate,random bytes vs valid,300,37.5,,,0.4,,constant-time (no evidence of leak)
