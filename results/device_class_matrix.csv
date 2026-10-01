@@ -1,0 +1,9 @@
+scheme,role,RFC7228_class0,RFC7228_class1,RFC7228_class2,rationale
+ML-KEM-512,KEM,no,yes*,yes,"~3 KB stack, sub-40 ms/op @24 MHz; the practical KEM floor. *Class 1 fits but 800 B key + 768 B ct fragment heavily over 802.15.4."
+ML-KEM-768,KEM,no,caution,yes,"TLS-recommended level; ~5 KB stack, ~58 ms decaps. Larger wire cost (1.1 KB) strains Class 1 radios."
+ML-DSA-44,signature,no,caution,yes,~50+ KB peak stack for signing is the binding constraint on Class 1; sign ~330 ms @24 MHz. Fine on Class 2 (paper's node).
+Falcon-512,signature,no,verify-only,yes (verify-heavy),"Verify is tiny (~11 ms, ~655 B sig - variable-length compressed encoding, 752 B max) -> great for firmware-update verification on constrained nodes; keygen (~3 s) and FP-heavy signing belong on a gateway."
+SPHINCS+-128s,signature,no,no,verify-only,Signing is minutes on M4; only verification (~0.3 s) is deployable. Conservative security when signing happens off-device.
+SPHINCS+-128f,signature,no,no,caution,Sign ~15 s @24 MHz and 17 KB signature; impractical on-device. Value is hash-only security for rarely-signing roots.
+Hybrid X25519+ML-KEM-768,KEM,no,no,yes,"+64 B total on the wire (+32 B each way) and sub-ms over pure ML-KEM (Phase 3); the cheap insurance a Class 2 node should take. Below Class 2, offload to a gateway."
+RSA-2048 / ECDH (classical),both,ECDH only,yes,yes,Quantum-BROKEN (baseline only). ECC is light on-device; RSA keygen (tens of ms + heavy tail) should never run on the device.

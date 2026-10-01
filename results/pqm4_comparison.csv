@@ -1,0 +1,22 @@
+algorithm,kind,operation,impl,m4_cycles,m4_ms_at_24mhz,m4_ms_at_paper_120mhz,desktop_ms,m4_vs_desktop_x,base_paper_sim_ms,paper_over_pqm4_at_120mhz,implied_clock_mhz
+ML-KEM-512 (Kyber512),KEM,keygen,clean,595793,24.82,4.96,0.138021,180.0,,,
+ML-KEM-512 (Kyber512),KEM,encapsulate,clean,700605,29.19,5.84,0.1542,189.0,28,4.8,25.0
+ML-KEM-512 (Kyber512),KEM,decapsulate,clean,888653,37.03,7.41,0.064232,576.0,31,4.19,28.7
+ML-KEM-768 (Kyber768),KEM,keygen,clean,988722,41.2,8.24,0.174379,236.0,,,
+ML-KEM-768 (Kyber768),KEM,encapsulate,clean,1138225,47.43,9.49,0.20121,236.0,,,
+ML-KEM-768 (Kyber768),KEM,decapsulate,clean,1387984,57.83,11.57,0.089674,645.0,,,
+ML-DSA-44 (Dilithium2),Signature,keygen,clean,1874405,78.1,15.62,0.23815,328.0,,,
+ML-DSA-44 (Dilithium2),Signature,sign,clean,7925955,330.25,66.05,0.572109,577.0,42,0.64,188.7
+ML-DSA-44 (Dilithium2),Signature,verify,clean,2063096,85.96,17.19,0.141315,608.0,36,2.09,57.3
+ML-DSA-65 (Dilithium3),Signature,keygen,clean,3205533,133.56,26.71,0.360145,371.0,,,
+ML-DSA-65 (Dilithium3),Signature,sign,clean,12359056,514.96,102.99,0.872247,590.0,,,
+ML-DSA-65 (Dilithium3),Signature,verify,clean,3377305,140.72,28.14,0.22805,617.0,,,
+Falcon-512,Signature,keygen,opt m4-ct*,72000000,3000.0,600.0,21.57515,139.0,,,
+Falcon-512,Signature,sign,opt m4-ct*,22000000,916.67,183.33,6.4142,143.0,,,
+Falcon-512,Signature,verify,opt m4-ct*,255000,10.62,2.12,0.065879,161.0,,,
+SPHINCS+-SHA2-128f,Signature,keygen,clean,15742990,655.96,131.19,2.29535,286.0,,,
+SPHINCS+-SHA2-128f,Signature,sign,clean,368575228,15357.3,3071.46,60.4586,254.0,,,
+SPHINCS+-SHA2-128f,Signature,verify,clean,21923628,913.48,182.7,3.2913,278.0,,,
+SPHINCS+-SHA2-128s,Signature,keygen,clean,1007731522,41988.81,8397.76,167.5439,251.0,,,
+SPHINCS+-SHA2-128s,Signature,sign,clean,7657558168,319064.92,63812.98,1189.017,268.0,,,
+SPHINCS+-SHA2-128s,Signature,verify,clean,7471794,311.32,62.26,1.045514,298.0,,,
