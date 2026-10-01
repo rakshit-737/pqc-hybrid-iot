@@ -1,0 +1,16 @@
+timestamp_utc   : 2026-07-27T09:26:56.930284+00:00
+platform        : Windows-11-10.0.26200-SP0
+cpu             : 13th Gen Intel(R) Core(TM) i5-13500H
+cpu (raw id)    : Intel64 Family 6 Model 186 Stepping 2, GenuineIntel
+logical cores   : 16
+power plan      : Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e (Balanced)
+battery status  : 1  (2 or empty typically = on AC)
+process pinning : priority=HIGH(True), affinity=CPU0(True)
+python          : 3.14.3 (CPython)
+pqcrypto        : 0.4.0 (PQClean portable C, no AVX2)
+cryptography    : 49.0.0 (OpenSSL-backed, optimized asm)
+mode            : full
+config          : {'warmup_s': 0.25, 'budget_s': 3.0, 'min_samples': 15, 'max_samples': 300, 'target_sample_s': 0.01, 'batch_threshold_s': 0.001}
+message length  : 59 bytes (SUPERCOP/pqm4 convention)
+note            : run on AC power, high-performance plan, idle machine;
+                  classical ops run before PQC ops (order not interleaved).
