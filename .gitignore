@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# LaTeX build artefacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+
+# Editor / agent tooling
+.vscode/
+.idea/
+.claude/
+.agents/
+.opencode/
+graphify-out/
+HANDOFF_PROMPT.md
+
+# Copyrighted base paper (cite via DOI instead)
+base-paper/
+
+# OS
+.DS_Store
+Thumbs.db
+~$*
