@@ -1,0 +1,17 @@
+family,kind,algorithm,nist_level,quantum_resistant,public_key_bytes,secret_key_bytes,ciphertext_or_signature_bytes,observed_bytes,shared_secret_bytes,observed_min_bytes,observed_max_bytes
+Classical,KEM,ECDH P-256,-,no,65,32,65,65,32,,
+Classical,KEM,X25519,-,no,32,32,32,32,32,,
+Classical,KEM,RSA-2048 (OAEP),-,no,294,1217,256,256,32,,
+Classical,Signature,ECDSA P-256,-,no,65,32,72,71,,,
+Classical,Signature,Ed25519,-,no,32,32,64,64,,,
+Classical,Signature,RSA-2048 (PSS),-,no,294,1217,256,256,,,
+Lattice,KEM,ML-KEM-512 (Kyber512),1,yes,800,1632,768,768,32,,
+Lattice,KEM,ML-KEM-768 (Kyber768),3,yes,1184,2400,1088,1088,32,,
+Lattice,KEM,ML-KEM-1024 (Kyber1024),5,yes,1568,3168,1568,1568,32,,
+Code-based,KEM,HQC-128,1,yes,2249,2305,4433,4433,64,,
+Lattice,Signature,ML-DSA-44 (Dilithium2),2,yes,1312,2560,2420,2420,,2420,2420
+Lattice,Signature,ML-DSA-65 (Dilithium3),3,yes,1952,4032,3309,3309,,3309,3309
+Lattice,Signature,Falcon-512,1,yes,897,1281,752,655,,651,660
+Lattice,Signature,Falcon-1024,5,yes,1793,2305,1462,1270,,1262,1278
+Hash-based,Signature,SPHINCS+-SHA2-128f,1,yes,32,64,17088,17088,,17088,17088
+Hash-based,Signature,SPHINCS+-SHA2-128s,1,yes,32,64,7856,7856,,7856,7856
